@@ -1,0 +1,42 @@
+/* Shared card shell for preview/*.html files.
+   Cards render in the Design System tab at ~700px wide.  */
+@import url('../colors_and_type.css');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  width: 100%;
+  overflow: hidden;
+}
+
+.card {
+  padding: 28px 32px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+}
+
+.row  { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.col  { display: flex; flex-direction: column; gap: 12px; }
+.grid { display: grid; gap: 12px; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--fg-muted); }
+
+.swatch {
+  border-radius: var(--r-md);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+}
+
+/* scorecard grid texture */
+.scorecard-bg {
+  background-color: var(--ridge-cream);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: -1px -1px;
+}

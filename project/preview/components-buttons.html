@@ -1,0 +1,22 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 28px; background: var(--bg-raised);
+          display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  button { font-family: var(--font-body); font-weight: 700; font-size: 15px;
+           border-radius: var(--r-pill); border: none; cursor: pointer;
+           padding: 12px 22px; letter-spacing: 0.01em; }
+  .primary { background: var(--ridge-apple); color: #fff;
+             box-shadow: 0 3px 0 var(--ridge-apple-ink), var(--shadow-sm); }
+  .secondary { background: var(--ridge-cream); color: var(--ridge-fairway);
+               box-shadow: inset 0 0 0 2px var(--ridge-fairway); }
+  .ghost { background: transparent; color: var(--ridge-apple); padding: 10px 14px; }
+  .tertiary { background: var(--ridge-fairway); color: #fff;
+             box-shadow: 0 3px 0 var(--ridge-fairway-dk), var(--shadow-sm); }
+</style></head>
+<body><div class="card">
+  <button class="primary">Log a round</button>
+  <button class="tertiary">Add a course</button>
+  <button class="secondary">Cancel</button>
+  <button class="ghost">Skip →</button>
+</div></body></html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 28px; background: var(--bg-raised); }
+  .spec { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+          text-transform: uppercase; color: var(--fg-muted); margin-bottom: 6px; }
+  table { font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+          border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: center;
+           font-size: 16px; }
+  th { background: var(--ridge-fairway); color: var(--ridge-cream);
+       font-family: var(--font-body); font-weight: 700; font-size: 11px;
+       letter-spacing: 0.14em; text-transform: uppercase; }
+  .par { background: var(--ridge-fairway-soft); font-weight: 500; color: var(--ridge-fairway-dk); }
+  .hole { background: var(--ridge-parchment); font-weight: 700; }
+  .birdie { color: var(--ridge-fairway); font-weight: 700; }
+  .bogey  { color: var(--ridge-apple); font-weight: 700; }
+  .eagle  { color: #b68300; font-weight: 700; text-decoration: underline;
+            text-decoration-thickness: 2px; text-underline-offset: 3px; }
+</style></head>
+<body><div class="card">
+  <div class="spec">Scorecard Numerals · JetBrains Mono · tabular-nums</div>
+  <table>
+    <tr><th>Hole</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>OUT</th></tr>
+    <tr><td class="par">Par</td><td class="par">4</td><td class="par">5</td><td class="par">3</td><td class="par">4</td><td class="par">4</td><td class="par">3</td><td class="par">5</td><td class="par">4</td><td class="par">4</td><td class="par">36</td></tr>
+    <tr><td class="hole">Will</td><td class="birdie">3</td><td>5</td><td>3</td><td class="bogey">5</td><td>4</td><td>3</td><td class="eagle">3</td><td>4</td><td class="bogey">6</td><td>36</td></tr>
+  </table>
+</div></body></html>

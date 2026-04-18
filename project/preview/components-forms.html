@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 28px; background: var(--bg-raised);
+          display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+  label { font-family: var(--font-body); font-weight: 700; font-size: 11px;
+          letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-muted);
+          display: block; margin-bottom: 6px; }
+  .field { font-family: var(--font-body); font-size: 15px;
+           width: 100%; box-sizing: border-box;
+           padding: 10px 12px; border-radius: var(--r-sm);
+           border: 1.5px solid var(--line-strong); background: var(--ridge-bone);
+           color: var(--fg); }
+  .focus { border-color: var(--ridge-apple);
+           box-shadow: 0 0 0 3px var(--ridge-apple-soft); }
+  .chk { display: flex; align-items: center; gap: 8px; font-family: var(--font-body);
+         font-size: 14px; color: var(--fg); }
+  .box { width: 18px; height: 18px; border: 2px solid var(--ridge-apple-ink);
+         border-radius: 4px; background: var(--ridge-apple); position: relative; }
+  .box::after { content: "✓"; position: absolute; inset: 0;
+         display: flex; align-items: center; justify-content: center;
+         color: #fff; font-weight: 900; font-size: 13px; }
+</style></head>
+<body><div class="card">
+  <div><label>Course</label>
+    <input class="field focus" value="Pebble Creek GC"></div>
+  <div><label>Date</label>
+    <input class="field" value="Jul 12, 2026"></div>
+  <div><label>Your Score</label>
+    <input class="field" value="84"></div>
+  <div><label>Weather</label>
+    <select class="field"><option>Sunny &amp; breezy</option></select></div>
+  <div class="chk" style="grid-column:1/-1; margin-top:4px;">
+    <div class="box"></div> Count this round toward the season average</div>
+</div></body></html>

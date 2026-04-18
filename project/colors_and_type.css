@@ -1,0 +1,238 @@
+/* ==========================================================================
+   The Ridge — Colors & Type
+   Summer golf logbook. Country-club-scorecard-meets-backyard-BBQ.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Shrikhand&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* -----------------------------------------------------------------
+     APPLE REDS — the heart of the brand (from the logo apple)
+     ----------------------------------------------------------------- */
+  --ridge-apple:       #B83A2E;  /* logo red — rich apple */
+  --ridge-apple-ink:   #962A20;  /* pressed / darker hover */
+  --ridge-apple-soft:  #F3D5D0;  /* tints & chips */
+  --ridge-apple-deep:  #6E1C13;  /* deepest red — near-black body */
+  --ridge-rust:        #D45A4A;  /* lighter accent red */
+
+  /* -----------------------------------------------------------------
+     FAIRWAY GREENS — secondary (from the wordmark)
+     ----------------------------------------------------------------- */
+  --ridge-fairway:     #2F6B2D;  /* wordmark green */
+  --ridge-fairway-dk:  #1F4A1E;  /* deepest green */
+  --ridge-moss:        #5A8A3A;  /* mid olive green */
+  --ridge-fairway-soft:#D4E4C8;  /* green tint */
+
+  /* -----------------------------------------------------------------
+     WARM NEUTRALS — scorecard paper
+     ----------------------------------------------------------------- */
+  --ridge-cream:       #F7F1E1;  /* primary background — scorecard */
+  --ridge-parchment:   #EFE5CC;  /* secondary bg, card */
+  --ridge-bone:        #FBF7EC;  /* lightest, almost-white */
+  --ridge-ink:         #2A2418;  /* body copy — warm near-black */
+  --ridge-pencil:      #5C4A36;  /* secondary ink, pencil marks */
+  --ridge-mist:        #B8A98C;  /* hairlines, dividers */
+
+  /* -----------------------------------------------------------------
+     ACCENTS — sand, sky, gold
+     ----------------------------------------------------------------- */
+  --ridge-sand:        #E5C98A;  /* bunker tan */
+  --ridge-sky:         #A9D3E0;  /* sky — reserved, rare */
+  --ridge-sun:         #F2C14E;  /* eagle / badge gold */
+
+  /* legacy aliases (old lime/flag names mapped to new brand) */
+  --ridge-lime:        var(--ridge-apple);
+  --ridge-lime-ink:    var(--ridge-apple-ink);
+  --ridge-lime-soft:   var(--ridge-apple-soft);
+  --ridge-flag:        var(--ridge-apple);
+  --ridge-flag-dk:     var(--ridge-apple-ink);
+
+  /* -----------------------------------------------------------------
+     SEMANTIC TOKENS
+     ----------------------------------------------------------------- */
+  --bg:                var(--ridge-cream);
+  --bg-raised:         var(--ridge-bone);
+  --bg-sunk:           var(--ridge-parchment);
+
+  --fg:                var(--ridge-ink);
+  --fg-muted:          var(--ridge-pencil);
+  --fg-faint:          var(--ridge-mist);
+
+  --brand:             var(--ridge-apple);
+  --brand-ink:         var(--ridge-apple-ink);
+  --brand-deep:        var(--ridge-apple-deep);
+  --brand-alt:         var(--ridge-fairway);   /* wordmark green */
+
+  --line:              #D8C9A7;      /* scorecard grid lines */
+  --line-strong:       var(--ridge-pencil);
+
+  --good:              var(--ridge-fairway);   /* birdie — green */
+  --great:             var(--ridge-sun);       /* eagle */
+  --bad:               var(--ridge-apple);     /* bogey+ */
+
+  /* -----------------------------------------------------------------
+     RADII — soft but not bubbly
+     ----------------------------------------------------------------- */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   14px;
+  --r-lg:   22px;
+  --r-xl:   32px;
+  --r-pill: 999px;
+
+  /* -----------------------------------------------------------------
+     SPACING (4px baseline)
+     ----------------------------------------------------------------- */
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:   12px;
+  --s-4:   16px;
+  --s-5:   24px;
+  --s-6:   32px;
+  --s-7:   48px;
+  --s-8:   64px;
+  --s-9:   96px;
+
+  /* -----------------------------------------------------------------
+     SHADOWS — light, warm, like paper on grass
+     ----------------------------------------------------------------- */
+  --shadow-sm: 0 1px 0 rgba(42, 36, 24, 0.08),
+               0 2px 6px rgba(42, 36, 24, 0.06);
+  --shadow-md: 0 2px 0 rgba(42, 36, 24, 0.10),
+               0 8px 20px rgba(42, 36, 24, 0.10);
+  --shadow-lg: 0 4px 0 rgba(42, 36, 24, 0.12),
+               0 18px 40px rgba(42, 36, 24, 0.14);
+  --shadow-inset: inset 0 0 0 1px var(--line);
+
+  /* -----------------------------------------------------------------
+     TYPEFACES
+       Display — "Caveat Brush" substitutes the hand-lettered wordmark vibe.
+         (Logo itself uses custom hand lettering — Shrikhand is the
+          sturdier retro fallback for numbers / signage.)
+       Body     — DM Sans
+       Serif    — DM Serif Display (for editorial / quotes)
+       Mono     — JetBrains Mono (for scorecard numerals)
+     ----------------------------------------------------------------- */
+  --font-display: 'Caveat Brush', 'Marker Felt', cursive;
+  --font-sign:    'Shrikhand', 'Rockwell', 'Courier New', serif;   /* chunky retro */
+  --font-serif:   'DM Serif Display', Georgia, serif;
+  --font-body:    'DM Sans', -apple-system, 'Helvetica Neue', sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ==========================================================================
+   BASE TYPE
+   ========================================================================== */
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--brand);
+  margin: 0 0 var(--s-5) 0;
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(36px, 4.5vw, 64px);
+  line-height: 1.1;
+  color: var(--brand);
+  margin: 0 0 var(--s-4) 0;
+}
+
+h3, .h3 {
+  font-family: var(--font-sign);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--fg);
+  margin: 0 0 var(--s-3) 0;
+}
+
+h4, .h4 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin: 0 0 var(--s-2) 0;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-ink);
+}
+
+.lede {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--fg-muted);
+}
+
+p, .body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--fg);
+  margin: 0 0 var(--s-4) 0;
+}
+
+.small {
+  font-size: 13px;
+  color: var(--fg-muted);
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.score {
+  /* Scorecard numerals — tabular mono. */
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 20px;
+  color: var(--fg);
+}
+
+code, .code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--bg-sunk);
+  border: 1px solid var(--line);
+  border-radius: var(--r-xs);
+  padding: 2px 6px;
+  color: var(--ridge-fairway-dk);
+}
+
+a {
+  color: var(--brand-ink);
+  text-decoration-color: var(--ridge-lime);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 120ms ease;
+}
+a:hover { color: var(--ridge-lime-ink); }

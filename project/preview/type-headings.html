@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 28px; background: var(--bg-raised); display: grid;
+          grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+  .block { display: flex; flex-direction: column; gap: 4px; }
+  .spec { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+          text-transform: uppercase; color: var(--fg-muted); }
+  .h1 { font-family: var(--font-display); color: var(--ridge-apple);
+        font-size: 54px; line-height: 1.05; margin: 0; }
+  .h2 { font-family: var(--font-display); color: var(--ridge-apple);
+        font-size: 40px; line-height: 1.1; margin: 0; }
+  .h3 { font-family: var(--font-sign); font-size: 24px; color: var(--fg); margin: 0;
+        letter-spacing: 0.01em; }
+  .h4 { font-family: var(--font-body); font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.14em; font-size: 14px; color: var(--fg-muted); margin: 0; }
+  .eyebrow { font-family: var(--font-body); font-weight: 700; font-size: 11px;
+             letter-spacing: 0.2em; text-transform: uppercase;
+             color: var(--ridge-fairway); }
+</style></head>
+<body><div class="card">
+  <div class="block"><span class="spec">H1 · Caveat Brush · 54 · apple red</span>
+    <h1 class="h1">Saturday at Pebble Creek.</h1></div>
+  <div class="block"><span class="spec">H2 · Caveat Brush · 40</span>
+    <h2 class="h2">The front nine.</h2></div>
+  <div class="block"><span class="spec">H3 · Shrikhand · 24</span>
+    <h3 class="h3">Leaderboard</h3></div>
+  <div class="block"><span class="spec">H4 · DM Sans Bold · 14 · 0.14em</span>
+    <h4 class="h4">Course Details</h4></div>
+  <div class="block" style="grid-column: 1 / -1;"><span class="spec">Eyebrow · DM Sans Bold · 11 · fairway green</span>
+    <span class="eyebrow">Round No. 7 — July 12, 2026</span></div>
+</div></body></html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 20px 28px; background: var(--bg-raised); }
+  h4 { font-family: var(--font-body); font-size: 11px; font-weight: 700;
+       letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-muted);
+       margin: 0 0 10px 0; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .player { display: flex; align-items: center; gap: 8px;
+            background: var(--ridge-cream); border: 1px solid var(--line);
+            border-radius: var(--r-pill); padding: 4px 14px 4px 4px; }
+  .av { width: 32px; height: 32px; border-radius: 999px;
+        background: var(--ridge-apple); color: #fff;
+        display: flex; align-items: center; justify-content: center;
+        font-family: var(--font-display); font-size: 20px; }
+  .av.c2 { background: var(--ridge-fairway); }
+  .av.c3 { background: var(--ridge-sun); color: var(--ridge-apple-deep); }
+  .av.c4 { background: var(--ridge-moss); }
+  .name { font-family: var(--font-body); font-weight: 700; font-size: 14px; color: var(--fg); }
+  .hcp  { font-family: var(--font-mono); font-size: 11px; color: var(--fg-muted); }
+</style></head>
+<body><div class="card">
+  <h4>Playing Today · 4 golfers</h4>
+  <div class="row">
+    <div class="player"><div class="av">W</div><div><div class="name">Will</div><div class="hcp">hcp 14.2</div></div></div>
+    <div class="player"><div class="av c2">C</div><div><div class="name">Connor</div><div class="hcp">hcp 8.7</div></div></div>
+    <div class="player"><div class="av c3">S</div><div><div class="name">Sam</div><div class="hcp">hcp 22.0</div></div></div>
+    <div class="player"><div class="av c4">J</div><div><div class="name">Jake</div><div class="hcp">hcp 18.5</div></div></div>
+  </div>
+</div></body></html>

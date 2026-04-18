@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 28px; background: var(--bg-raised);
+          display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .sect { display: flex; flex-direction: column; gap: 10px; }
+  h4 { font-family: var(--font-body); font-size: 11px; font-weight: 700;
+       letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-muted);
+       margin: 0; }
+  .stroke {
+    height: 14px; border-radius: 999px;
+    background: var(--ridge-apple);
+  }
+  .stroke.ink  { background: var(--ridge-fairway); }
+  .stroke.thin { height: 3px; background: var(--ridge-pencil); }
+  .dotted { border-top: 2px dashed var(--ridge-pencil); height: 0; }
+  .flag-line { display: flex; align-items: center; gap: 10px; }
+  .flag-line::before {
+    content: ""; display: block; flex: 1; height: 2px;
+    background: repeating-linear-gradient(90deg, var(--ridge-pencil) 0 8px, transparent 8px 16px);
+  }
+  .flag-line::after {
+    content: ""; width: 22px; height: 22px; flex: 0 0 22px;
+    background: var(--ridge-apple);
+    clip-path: polygon(0 0, 100% 40%, 0 80%);
+  }
+  .note { font-family: var(--font-mono); font-size: 10px;
+          letter-spacing: 0.1em; color: var(--fg-muted); text-transform: uppercase; }
+</style></head>
+<body><div class="card">
+  <div class="sect"><h4>Strokes</h4>
+    <div class="stroke"></div>
+    <div class="stroke ink"></div>
+    <div class="stroke thin"></div>
+    <span class="note">brand · fairway · hairline</span>
+  </div>
+  <div class="sect"><h4>Scorecard Lines</h4>
+    <div class="dotted"></div>
+    <div class="flag-line"></div>
+    <span class="note">dashed divider · fairway-to-pin</span>
+  </div>
+</div></body></html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .card { padding: 22px 28px; background: var(--bg-raised);
+          display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .pill { font-family: var(--font-body); font-weight: 700; font-size: 12px;
+          letter-spacing: 0.08em; text-transform: uppercase;
+          padding: 6px 12px; border-radius: var(--r-pill);
+          display: inline-flex; align-items: center; gap: 6px; }
+  .dot { width: 8px; height: 8px; border-radius: 999px; }
+  .eagle { background: #FDEFCC; color: #8A6400; }
+  .birdie { background: var(--ridge-fairway-soft); color: var(--ridge-fairway-dk); }
+  .par { background: var(--ridge-parchment); color: var(--ridge-pencil); }
+  .bogey { background: var(--ridge-apple-soft); color: var(--ridge-apple-ink); }
+  .double { background: #E9C4BE; color: var(--ridge-apple-deep); }
+  .tag { font-family: var(--font-body); font-size: 12px; font-weight: 600;
+         padding: 4px 10px; border-radius: var(--r-sm);
+         background: var(--ridge-cream); border: 1px dashed var(--ridge-pencil);
+         color: var(--ridge-pencil); }
+</style></head>
+<body><div class="card">
+  <span class="pill eagle"><span class="dot" style="background:var(--ridge-sun)"></span>Eagle</span>
+  <span class="pill birdie"><span class="dot" style="background:var(--ridge-fairway)"></span>Birdie</span>
+  <span class="pill par"><span class="dot" style="background:var(--ridge-pencil)"></span>Par</span>
+  <span class="pill bogey"><span class="dot" style="background:var(--ridge-apple)"></span>Bogey</span>
+  <span class="pill double"><span class="dot" style="background:var(--ridge-apple-deep)"></span>Double</span>
+  <span class="tag">18 holes</span>
+  <span class="tag">Public</span>
+  <span class="tag">Par 72</span>
+</div></body></html>
